@@ -1,0 +1,119 @@
+/* Обнуление и общие стили */
+*,
+*::after,
+*::before {
+   padding: 0;
+   margin: 0;
+   border: 0;
+   box-sizing: border-box;
+}
+
+/* Управление высотой строки, но размер шрифта браузера должен быть установлен по умолчанию */
+/* * {
+   line-height: calc(1em + 0.5rem);
+} */
+
+ul[role='list'],
+ol[role='list'] {
+   list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+   font: inherit;
+   /* Избегаем переполнения текста, разрешаем жесткий перенос */
+   overflow-wrap: break-word;
+}
+
+p {
+   overflow-wrap: break-word;
+   /* используем дефисы */
+   /* hyphens: auto; */
+}
+
+a,
+a:visited,
+a:hover {
+   text-decoration: none;
+   cursor: url("../img/icons/cursor.svg") 2 2, pointer;
+}
+
+:focus,
+:active,
+a:focus,
+a:active {
+   outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+   display: block;
+}
+
+input,
+button,
+textarea,
+select {
+   font: inherit;
+   color: inherit;
+   background-color: transparent;
+}
+
+input::-ms-clear {
+   display: none;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+   display: block;
+   max-width: 100%;
+   height: auto;
+}
+
+img {
+   vertical-align: top;
+   object-fit: cover;
+}
+
+button,
+input[type="submit"] {
+   display: inline-block;
+   box-shadow: none;
+   background-color: transparent;
+   background: none;
+   cursor: url("../img/icons/cursor.svg") 2 2, pointer;
+}
+
+label {
+   cursor: url("../img/icons/cursor.svg") 2 2, pointer;
+}
+
+button::-moz-focus-inner {
+   padding: 0;
+   border: 0;
+}
+
+html,
+body {
+   height: 100%;
+}
+
+html:focus-within {
+   scroll-behavior: smooth;
+}
+
+body {
+   /* критерии WCAG для «основного» текста (см. стр.11) */
+   line-height: 1.5;
+   /* Улучшить рендеринг текста (отключаем субпиксельное сглаживание в Chrome и Safari) */
+   -webkit-font-smoothing: antialiased;
+}

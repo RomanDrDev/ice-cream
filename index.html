@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ICE</title>
+   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+   <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+   <div class="wrapper">
+      <header id="header" class="header lock-padding">
+         <div class="header__container">
+            <a class="header__logo" data-goto="#header" href="#">
+               <svg>
+                  <use xlink:href="./img/icons/sprite.svg#logo"></use>
+               </svg>
+            </a>
+            <nav class="header__nav nav lock-padding" data-nav>
+               <ul class="nav__list" role="list">
+                  <li class="nav__item"><a data-goto="#header" href="#" class="nav__link">Home</a></li>
+                  <li class="nav__item"><a data-goto="#about" href="#" class="nav__link">How it’s made?</a></li>
+                  <li class="nav__item"><a data-goto="#products" href="#" class="nav__link">Our products</a></li>
+                  <li class="nav__item"><a data-goto="#contacts" href="#" class="nav__link">Contact</a></li>
+               </ul>
+            </nav>
+            <button class="header__menu-icon" data-burger aria-label="Open the menu" aria-expanded="false"><span></span></button>
+            <div class="header__inner">
+               <a href="#buy-now" class="header__button btn popup-link" aria-label="The button for opening the modal window 'Buy now'">
+                  <span>Buy now</span>
+                  <svg aria-hidden="true" width="12" height="12">
+                     <use xlink:href="./img/icons/sprite.svg#forward-arrow"></use>
+                  </svg>
+               </a>
+            </div>
+         </div>
+      </header>
+
+      <main class="main">
+         <section class="welcome">
+            <div class="welcome__container">
+               <svg class="welcome__dots welcome__dots-left">
+                  <use xlink:href="./img/icons/sprite.svg#dots-group-left"></use>
+               </svg>
+               <svg class="welcome__dots welcome__dots-center">
+                  <use xlink:href="./img/icons/sprite.svg#dots-group-center"></use>
+               </svg>
+               <svg class="welcome__dots welcome__dots-right">
+                  <use xlink:href="./img/icons/sprite.svg#dots-group-right"></use>
+               </svg>
+               <div class="welcome__image">
+                  <picture>
+                     <source srcset="./img/welcome/big-ice-cream-2x.avif" type="image/avif" media="(min-width:767.98px)">
+                     <source srcset="./img/welcome/big-ice-cream-2x.webp" type="image/webp" media="(min-width:767.98px)">
+                     <source srcset="./img/welcome/big-ice-cream-2x.png" type="image/png" media="(min-width:767.98px)">
+                     <source srcset="./img/welcome/big-ice-cream.avif, ./img/welcome/big-ice-cream-2x.avif 2x" type="image/avif" media="(min-width:575.98px)">
+                     <source srcset="./img/welcome/big-ice-cream.webp, ./img/welcome/big-ice-cream-2x.webp 2x" type="image/webp" media="(min-width:575.98px)">
+                     <source srcset="./img/welcome/big-ice-cream.png" srcset="./img/welcome/big-ice-cream-2x.png 2x" type="image/png" media="(min-width:575.98px)">
+                     <source srcset="./img/welcome/big-ice-cream-sm.avif, ./img/welcome/big-ice-cream.avif 2x" type="image/avif">
+                     <source srcset="./img/welcome/big-ice-cream-sm.webp, ./img/welcome/big-ice-cream.webp 2x" type="image/webp">
+                     <img src="./img/welcome/big-ice-cream-sm.png" srcset="./img/welcome/big-ice-cream.png 2x" alt="A large cone with three balls of multi-colored ice cream">
+                  </picture>
+               </div>
+               <div class="welcome__content">
+                  <h2 class="welcome__title title">ice cream made with <span>passion</span></h2>
+                  <div class="welcome__buttons">
+                     <a data-goto="#products" href="#" class="welcome__button btn btn--transparent" aria-label="The button to go to the products section">Products</a>
+                     <a data-goto="#about" href="#" class="welcome__btn-link link-btn" aria-label="The button to go to the 'About Us' section">How it’s made?</a>
+                  </div>
+               </div>
+               <div class="welcome__numbers numbers">
+                  <div class="numbers__item">
+                     <span class="numbers__num">16</span>
+                     <span class="numbers__text">cafes</span>
+                  </div>
+                  <div class="numbers__item">
+                     <span class="numbers__num">23</span>
+                     <span class="numbers__text">food trucks</span>
+                  </div>
+               </div>
+               <div class="welcome__desc">
+                  <picture class="welcome__desc-image">
+                     <source srcset="./img/welcome/balloons-ice-cream-3x.webp" type="image/webp" media="(min-width:767.98px)">
+                     <source srcset="./img/welcome/balloons-ice-cream-3x.png" type="image/png" media="(min-width:767.98px)">
+                     <source srcset="./img/welcome/balloons-ice-cream-sm.webp" type="image/webp" media="(max-width:767.98px)">
+                     <source srcset="./img/welcome/balloons-ice-cream-sm.png" type="image/png" media="(max-width:767.98px)">
+                     <img src="./img/welcome/balloons-ice-cream-sm.png" alt="A plate with balls of multi-colored ice cream">
+                  </picture>
+                  <div class="welcome__desc-inner">
+                     <p class="welcome__desc-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+                     <div class="welcome__desc-arrow arrow">
+                        <a data-goto="#about" href="#" class="arrow__link" aria-label="The link to go to the 'About Us' section"><svg aria-hidden="true">
+                              <use xlink:href="./img/icons/sprite.svg#arrow"></use>
+                           </svg></a>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section id="products" class="products">
+            <div class="products__container">
+               <h2 class="products__title title title--black title--section-title">100% natural<span>products</span></h2>
+               <div class="products__cards">
+                  <div class="products__card card">
+                     <div class="card__image img-group">
+                        <picture class="img-group__image">
+                           <source srcset="./img/products/ice-cream-3x.webp" type="image/webp" media="(min-width:767.98px)">
+                           <source srcset="./img/products/ice-cream-3x.jpg" type="image/jpg" media="(min-width:767.98px)">
+                           <source srcset="./img/products/ice-cream-2x.webp" type="image/webp" media="(min-width:575.98px)">
+                           <source srcset="./img/products/ice-cream-2x.jpg" type="image/jpg" media="(min-width:575.98px)">
+                           <source srcset="./img/products/ice-cream-sm.webp" type="image/webp" media="(max-width:575.98px)">
+                           <source srcset="./img/products/ice-cream-sm.jpg" type="image/jpg" media="(max-width:575.98px)">
+                           <img src="./img/products/ice-cream-sm.jpg" loading="lazy" alt="Photo Cones with ice cream balls by <a href='https://unsplash.com/@kelseycurtis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Kelsey Curtis</a> on <a href='https://unsplash.com/@kelseycurtis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>">
+                        </picture>
+                        <div class="img-group__decor img-group__decor--lightgreen"></div>
+                     </div>
+                     <div class="card__content card__content--bg-lightgreen">
+                        <h3 class="card__title title title--black title--card">ice cream</h3>
+                        <div class="card__description">
+                           <p>Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural stabilizer</p>
+                        </div>
+                        <div class="card__desc-arrow arrow">
+                           <a href="#chololate-icecream-ingredients" class="arrow__link popup-link" aria-label="The button for opening the modal window 'Ingredients'"><svg aria-hidden="true">
+                                 <use xlink:href="./img/icons/sprite.svg#arrow"></use>
+                              </svg></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="products__card card">
+                     <div class="card__image img-group">
+                        <picture class="img-group__image">
+                           <source srcset="./img/products/ice-coffee-3x.webp" type="image/webp" media="(min-width:767.98px)">
+                           <source srcset="./img/products/ice-coffee-3x.jpg" type="image/jpg" media="(min-width:767.98px)">
+                           <source srcset="./img/products/ice-coffee-2x.webp" type="image/webp" media="(min-width:575.98px)">
+                           <source srcset="./img/products/ice-coffee-2x.jpg" type="image/jpg" media="(min-width:575.98px)">
+                           <source srcset="./img/products/ice-coffee-sm.webp" type="image/webp" media="(max-width:575.98px)">
+                           <source srcset="./img/products/ice-coffee-sm.jpg" type="image/jpg" media="(max-width:575.98px)">
+                           <img src="./img/products/ice-coffee-sm.jpg" loading="lazy" alt="Photo Barista pouring milk into a glass of iced coffee by <a href='https://unsplash.com/@pariwatt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>pariwat pannium</a> on <a href='https://unsplash.com/@pariwatt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>">
+                        </picture>
+                        <div class="img-group__decor img-group__decor--lightyellow"></div>
+                     </div>
+                     <div class="card__content card__content--bg-lightyellow">
+                        <h3 class="card__title title title--black title--card">ice coffee</h3>
+                        <div class="card__description">
+                           <p>Fragrant invigorating drink created from 100% natural ingredients without the use of preservatives and flavor enhancers
+                           </p>
+                        </div>
+                        <div class="card__desc-arrow arrow">
+                           <a href="#chololate-icecream-ingredients" class="arrow__link popup-link" aria-label="The button for opening the modal window 'Ingredients'"><svg aria-hidden="true">
+                                 <use xlink:href="./img/icons/sprite.svg#arrow"></use>
+                              </svg></a>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="products__card card">
+                     <div class="card__image img-group">
+                        <picture class="img-group__image">
+                           <source srcset="./img/products/milkshakes-3x.webp" type="image/webp" media="(min-width:767.98px)">
+                           <source srcset="./img/products/milkshakes-3x.jpg" type="image/jpg" media="(min-width:767.98px)">
+                           <source srcset="./img/products/milkshakes-2x.webp" type="image/webp" media="(min-width:575.98px)">
+                           <source srcset="./img/products/milkshakes-2x.jpg" type="image/jpg" media="(min-width:575.98px)">
+                           <source srcset="./img/products/milkshakes-sm.webp" type="image/webp" media="(max-width:575.98px)">
+                           <source srcset="./img/products/milkshakes-sm.jpg" type="image/jpg" media="(max-width:575.98px)">
+                           <img src="./img/products/milkshakes-sm.jpg" loading="lazy" alt="Photo Oreo Frappuccino by <a href='https://unsplash.com/@victorrutka?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Victor Rutka</a> on <a href='https://unsplash.com/@victorrutka?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>">
+                        </picture>
+                        <div class="img-group__decor img-group__decor--lightshocolate"></div>
+                     </div>
+                     <div class="card__content card__content--bg-lightshocolate">
+                        <h3 class="card__title title title--black title--card">milkshakes</h3>
+                        <div class="card__description">
+                           <p>Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries and other sweets of your choice
+                           </p>
+                        </div>
+                        <div class="card__desc-arrow arrow">
+                           <a href="#chololate-icecream-ingredients" class="arrow__link popup-link" aria-label="The button for opening the modal window 'Ingredients'"><svg aria-hidden="true">
+                                 <use xlink:href="./img/icons/sprite.svg#arrow"></use>
+                              </svg></a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section id="about" class="about">
+            <div class="about__container">
+               <h2 class="about__title title title--section-title">tradition and love<span>how it’s made?</span></h2>
+               <div class="about__content">
+                  <div class="about__image img-group img-group--big">
+                     <picture class="img-group__image">
+                        <source srcset="./img/about/cow-in-the-meadow-3x.webp" type="image/webp" media="(min-width:767.98px)">
+                        <source srcset="./img/about/cow-in-the-meadow-3x.jpg" type="image/jpg" media="(min-width:767.98px)">
+                        <source srcset="./img/about/cow-in-the-meadow-2x.webp" type="image/webp" media="(min-width:575.98px)">
+                        <source srcset="./img/about/cow-in-the-meadow-2x.jpg" type="image/jpg" media="(min-width:575.98px)">
+                        <source srcset="./img/about/cow-in-the-meadow-sm.webp" type="image/webp" media="(max-width:575.98px)">
+                        <source srcset="./img/about/cow-in-the-meadow-sm.jpg" type="image/jpg" media="(max-width:575.98px)">
+                        <img src="./img/about/cow-in-the-meadow-sm.jpg" loading="lazy" alt="Photo cow in the meadow by Michael Martinelli-unsplash">
+                     </picture>
+                     <div class="img-group__decor img-group__decor--top img-group__decor--lightyellow"></div>
+                  </div>
+                  <div class="about__desc-inner">
+                     <div class="about__desc-text">
+                        <p>Ice is a place where you will become not only a little happier, but also healthier. Health is the main value for us, and we follow it when creating our handmade desserts.</p>
+                        <p>We use traditional recipes and 100% natural ingredients. Our products are so natural that they can be given to children from the age of three years. Sweets lovers can expect 55 types of ice cream, 15 types of coffee and 23 milkshakes.
+                        </p>
+                        <p>This is enough to choose ice cream and coffee for any mood!</p>
+                     </div>
+                     <div class="about__desc-button">
+                        <a href="#read-more" class="about__button btn popup-link" aria-label="The button for opening the modal window 'Read more'">
+                           <span>Read more</span>
+                           <svg aria-hidden="true" width="12" height="12">
+                              <use xlink:href="./img/icons/sprite.svg#forward-arrow"></use>
+                           </svg>
+                        </a>
+                     </div>
+                  </div>
+               </div>
+               <div class="about__numbers number-cards">
+                  <div class="number-cards__item">
+                     <div class="number-cards__icon">
+                        <svg>
+                           <use xlink:href="./img/icons/sprite.svg#cow"></use>
+                        </svg>
+                     </div>
+                     <div class="number-cards__value">721</div>
+                     <p class="number-cards__desc">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+                  </div>
+                  <div class="number-cards__item">
+                     <div class="number-cards__icon">
+                        <svg>
+                           <use xlink:href="./img/icons/sprite.svg#weight"></use>
+                        </svg>
+                     </div>
+                     <div class="number-cards__value">16kg</div>
+                     <p class="number-cards__desc">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+                  </div>
+                  <div class="number-cards__item">
+                     <div class="number-cards__icon">
+                        <svg>
+                           <use xlink:href="./img/icons/sprite.svg#ice-crema"></use>
+                        </svg>
+                     </div>
+                     <div class="number-cards__value">84</div>
+                     <p class="number-cards__desc">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+                  </div>
+               </div>
+            </div>
+
+            <div class="about__slider-box">
+               <div class="parent">
+                  <h2 class="visually-hidden">Slider with photos of our products</h2>
+                  <div id="slider-overlay" class="slider-overlay">
+                     <button type="button" id="right" class="right" name="button" aria-label="The button to show the next slide">
+                        <svg id="Capa_1" aria-hidden="true">
+                           <use xlink:href="./img/icons/sprite.svg#arrow-slider"></use>
+                        </svg>
+                     </button>
+                     <button type="button" id="left" class="left" name="button" aria-label="The button to show the previous slide">
+                        <svg id="Capa_2" aria-hidden="true">
+                           <use xlink:href="./img/icons/sprite.svg#arrow-slider"></use>
+                        </svg>
+                     </button>
+                     <svg id='svg2' class='up2' xmlns="http://www.w3.org/2000/svg">
+                        <circle id='circle1' class='circle1 steap' cx="4%" cy="49%" r="20" />
+                        <circle id='circle2' class='circle2 steap' cx="4%" cy="49%" r="100" />
+                        <circle id='circle3' class='circle3 steap' cx="4%" cy="49%" r="180" />
+                        <circle id='circle4' class='circle4 steap' cx="4%" cy="49%" r="260" />
+                        <circle id='circle5' class='circle5 steap' cx="4%" cy="49%" r="340" />
+                        <circle id='circle6' class='circle6 steap' cx="4%" cy="49%" r="420" />
+                        <circle id='circle7' class='circle7 steap' cx="4%" cy="49%" r="500" />
+                        <circle id='circle8' class='circle8 steap' cx="4%" cy="49%" r="580" />
+                        <circle id='circle9' class='circle9 steap' cx="4%" cy="49%" r="660" />
+                        <circle id='circle10' class='circle10 steap' cx="4%" cy="49%" r="740" />
+                        <circle id='circle11' class='circle11 steap' cx="4%" cy="49%" r="820" />
+                        <circle id='circle12' class='circle12 steap' cx="4%" cy="49%" r="900" />
+                        <circle id='circle13' class='circle13 steap' cx="4%" cy="49%" r="980" />
+                        <circle id='circle14' class='circle14 steap' cx="4%" cy="49%" r="1040" />
+                     </svg>
+                     <svg id='svg1' class='up2' xmlns="http://www.w3.org/2000/svg">
+                        <circle id='circle15' class='circle15 steap' cx="96%" cy="49%" r="20" />
+                        <circle id='circle16' class='circle16 steap' cx="96%" cy="49%" r="100" />
+                        <circle id='circle17' class='circle17 steap' cx="96%" cy="49%" r="180" />
+                        <circle id='circle18' class='circle18 steap' cx="96%" cy="49%" r="260" />
+                        <circle id='circle19' class='circle19 steap' cx="96%" cy="49%" r="340" />
+                        <circle id='circle20' class='circle20 steap' cx="96%" cy="49%" r="420" />
+                        <circle id='circle21' class='circle21 steap' cx="96%" cy="49%" r="500" />
+                        <circle id='circle22' class='circle22 steap' cx="96%" cy="49%" r="580" />
+                        <circle id='circle23' class='circle23 steap' cx="96%" cy="49%" r="660" />
+                        <circle id='circle24' class='circle24 steap' cx="96%" cy="49%" r="740" />
+                        <circle id='circle25' class='circle25 steap' cx="96%" cy="49%" r="820" />
+                        <circle id='circle26' class='circle26 steap' cx="96%" cy="49%" r="900" />
+                        <circle id='circle27' class='circle27 steap' cx="96%" cy="49%" r="980" />
+                        <circle id='circle28' class='circle28 steap' cx="96%" cy="49%" r="1040" />
+                     </svg>
+                     <div id='slide1' class='slider-overlay__item slide1'>
+                        <picture>
+                           <source srcset="./img/slider-overlay/1-3x.webp" type="image/webp" media="(min-width:767.98px)">
+                           <source srcset="./img/slider-overlay/1-3x.jpg" type="image/jpg" media="(min-width:767.98px)">
+                           <source srcset="./img/slider-overlay/1-2x.webp" type="image/webp" media="(min-width:575.98px)">
+                           <source srcset="./img/slider-overlay/1-2x.jpg" type="image/jpg" media="(min-width:575.98px)">
+                           <source srcset="./img/slider-overlay/1-sm.webp, ./img/slider-overlay/1-2x.webp 2x" type="image/webp" media="(max-width:575.98px)">
+                           <!-- <source srcset="./img/slider-overlay/1-sm.jpg" type="image/jpg" media="(max-width:575.98px)"> -->
+                           <img src="./img/slider-overlay/1-sm.jpg" srcset="./img/slider-overlay/1-2x.jpg 2x" loading="lazy" alt="Mix of cones with ice cream balls with blueberry berries">
+                        </picture>
+                     </div>
+                     <div id='slide2' class='slider-overlay__item slide2'>
+                        <picture>
+                           <source srcset="./img/slider-overlay/2-3x.webp" type="image/webp" media="(min-width:767.98px)">
+                           <source srcset="./img/slider-overlay/2-3x.jpg" type="image/jpg" media="(min-width:767.98px)">
+                           <source srcset="./img/slider-overlay/2-2x.webp" type="image/webp" media="(min-width:575.98px)">
+                           <source srcset="./img/slider-overlay/2-2x.jpg" type="image/jpg" media="(min-width:575.98px)">
+                           <source srcset="./img/slider-overlay/2-sm.webp, ./img/slider-overlay/2-2x.webp 2x" type="image/webp" media="(max-width:575.98px)">
+                           <!-- <source srcset="./img/slider-overlay/2-sm.jpg" type="image/jpg" media="(max-width:575.98px)"> -->
+                           <img src="./img/slider-overlay/2-sm.jpg" srcset="./img/slider-overlay/2-2x.jpg 2x" loading="lazy" alt="Mix of cones with ice cream balls with strawberries">
+                        </picture>
+                     </div>
+                     <div id='slide3' class='slider-overlay__item slide3'>
+                        <picture>
+                           <source srcset="./img/slider-overlay/3-3x.webp" type="image/webp" media="(min-width:767.98px)">
+                           <source srcset="./img/slider-overlay/3-3x.jpg" type="image/jpg" media="(min-width:767.98px)">
+                           <source srcset="./img/slider-overlay/3-2x.webp" type="image/webp" media="(min-width:575.98px)">
+                           <source srcset="./img/slider-overlay/3-2x.jpg" type="image/jpg" media="(min-width:575.98px)">
+                           <source srcset="./img/slider-overlay/3-sm.webp, ./img/slider-overlay/3-2x.webp 2x" type="image/webp" media="(max-width:575.98px)">
+                           <!-- <source srcset="./img/slider-overlay/3-sm.jpg" type="image/jpg" media="(max-width:575.98px)"> -->
+                           <img src="./img/slider-overlay/3-sm.jpg" srcset="./img/slider-overlay/3-2x.jpg 2x" loading="lazy" alt="A mix of cones with colorful ice cream balls">
+                        </picture>
+                     </div>
+                     <div id='slide4' class='slider-overlay__item slide4'>
+                        <picture>
+                           <source srcset="./img/slider-overlay/4-3x.webp" type="image/webp" media="(min-width:767.98px)">
+                           <source srcset="./img/slider-overlay/4-3x.jpg" type="image/jpg" media="(min-width:767.98px)">
+                           <source srcset="./img/slider-overlay/4-2x.webp" type="image/webp" media="(min-width:575.98px)">
+                           <source srcset="./img/slider-overlay/4-2x.jpg" type="image/jpg" media="(min-width:575.98px)">
+                           <source srcset="./img/slider-overlay/4-sm.webp, ./img/slider-overlay/4-2x.webp 2x" type="image/webp" media="(max-width:575.98px)">
+                           <!-- <source srcset="./img/slider-overlay/4-sm.jpg" type="image/jpg" media="(max-width:575.98px)"> -->
+                           <img src="./img/slider-overlay/4-sm.jpg" srcset="./img/slider-overlay/4-2x.jpg 2x" loading="lazy" alt="Mix of cones with ice cream balls with strawberries">
+                        </picture>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="feedbacks">
+            <div class="feedbacks__container">
+               <h2 class="visually-hidden">Feedback from customers about our products - homemade ice cream</h2>
+               <div class="feedbacks__slider slider-feedbacks">
+                  <div class="slider-feedbacks__items-wrapper">
+                     <div class="slider-feedbacks__item">
+                        <div class="feedback">
+                           <picture class="feedback__avatar">
+                              <source srcset="./img/feedbacks/1-2x.webp" type="image/webp" media="(min-width:575.98px)">
+                              <source srcset="./img/feedbacks/1-2x.jpg" type="image/jpg" media="(min-width:575.98px)">
+                              <source srcset="./img/feedbacks/1-sm.webp" type="image/webp" media="(max-width:575.98px)">
+                              <source srcset="./img/feedbacks/1-sm.jpg" type="image/jpg" media="(max-width:575.98px)">
+                              <img src="./img/feedbacks/1-sm.jpg" alt="User photo">
+                           </picture>
+                           <div class="feedback__text">
+                              <p>I love visiting your cafe. You prepare the most delicious ice cream in Los Angeles! In addition, you have beautiful serving, cozy atmosphere and polite staff.
+                              </p>
+                           </div>
+                           <div class="feedback__autor">Emily, Los Angeles</div>
+                        </div>
+                     </div>
+                     <div class="slider-feedbacks__item">
+                        <div class="feedback">
+                           <picture class="feedback__avatar">
+                              <source srcset="./img/feedbacks/2-2x.webp" type="image/webp" media="(min-width:575.98px)">
+                              <source srcset="./img/feedbacks/2-2x.jpg" type="image/jpg" media="(min-width:575.98px)">
+                              <source srcset="./img/feedbacks/2-sm.webp" type="image/webp" media="(max-width:575.98px)">
+                              <source srcset="./img/feedbacks/2-sm.jpg" type="image/jpg" media="(max-width:575.98px)">
+                              <img src="./img/feedbacks/2-sm.jpg" alt="User photo">
+                           </picture>
+                           <div class="feedback__text">
+                              <p>I love eating popsicles on a hot day. Yours is always delicious. I recommend your cafe to everyone I know.
+                              </p>
+                           </div>
+                           <div class="feedback__autor">Sam, Los Angeles</div>
+                        </div>
+                     </div>
+                     <div class="slider-feedbacks__item">
+                        <div class="feedback">
+                           <picture class="feedback__avatar">
+                              <source srcset="./img/feedbacks/3-2x.webp" type="image/webp" media="(min-width:575.98px)">
+                              <source srcset="./img/feedbacks/3-2x.jpg" type="image/jpg" media="(min-width:575.98px)">
+                              <source srcset="./img/feedbacks/3-sm.webp" type="image/webp" media="(max-width:575.98px)">
+                              <source srcset="./img/feedbacks/3-sm.jpg" type="image/jpg" media="(max-width:575.98px)">
+                              <img src="./img/feedbacks/3-sm.jpg" alt="User photo">
+                           </picture>
+                           <div class="feedback__text">
+                              <p>Ice cream is my passion! I love your chocolate hazelnut ice cream! And I really like the excellent service - always served politely and quickly!
+                              </p>
+                           </div>
+                           <div class="feedback__autor">Diana, Chicago</div>
+                        </div>
+                     </div>
+                     <div class="slider-feedbacks__item">
+                        <div class="feedback">
+                           <picture class="feedback__avatar">
+                              <source srcset="./img/feedbacks/4-2x.webp" type="image/webp" media="(min-width:575.98px)">
+                              <source srcset="./img/feedbacks/4-2x.jpg" type="image/jpg" media="(min-width:575.98px)">
+                              <source srcset="./img/feedbacks/4-sm.webp" type="image/webp" media="(max-width:575.98px)">
+                              <source srcset="./img/feedbacks/4-sm.jpg" type="image/jpg" media="(max-width:575.98px)">
+                              <img src="./img/feedbacks/4-sm.jpg" alt="User photo">
+                           </picture>
+                           <div class="feedback__text">
+                              <p>Every day we come to you with friends after classes in college. We love your ice cream and casual atmosphere!
+                              </p>
+                           </div>
+                           <div class="feedback__autor">Bryan, New-York</div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="slider-feedbacks__dots-wrapper">
+                     <!-- <button class="slider-feedbacks__dot slider-feedbacks__dot--active" aria-label="Slide switching point one"></button>
+                     <button class="slider-feedbacks__dot" aria-label="Slide switching point two"></button>
+                     <button class="slider-feedbacks__dot" aria-label="Slide switching point three"></button>
+                     <button class="slider-feedbacks__dot" aria-label="Slide switching point four"></button> -->
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section class="locations">
+            <div class="locations__container">
+               <h2 class="visually-hidden">Our points of sale, their location and opening hours</h2>
+               <div class="locations__cards">
+                  <div class="locations__card card-location">
+                     <h3 class="card-location__type">cafe</h3>
+                     <div class="card-location__address">
+                        <span class="card-location__city">Chicago</span>
+                        <a href="#" class="card-location__postal-address">10340 Ridgeland Ave, Chicago Ridge, IL&nbsp;60415, USA</a>
+                     </div>
+                     <div class="card-location__line"></div>
+                     <div class="card-location__opening-items">
+                        <div class="card-location__opening-item">
+                           <span class="card-location__days-working">Monday - Friday</span>
+                           <span class="card-location__hours-working">06:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="card-location__opening-item">
+                           <span class="card-location__days-working">Saturday - Sunday</span>
+                           <span class="card-location__hours-working">08:00 AM - 16:00 PM</span>
+                        </div>
+                     </div>
+                     <div class="card-location__line"></div>
+                     <address class="card-location__contacts">
+                        <a href="tel:+61(0)383766284">+61(0) 383 766 284</a>
+                        <a href="mailto:noreply@envato.com">noreply@envato.com</a>
+                     </address>
+                  </div>
+                  <div class="locations__card card-location">
+                     <h3 class="card-location__type">food truck</h3>
+                     <div class="card-location__address">
+                        <span class="card-location__city">Los Angeles</span>
+                        <a href="#" class="card-location__postal-address">1003 Manhattan Ave, Manhattan Beach, CA&nbsp;90263, USA</a>
+                     </div>
+                     <div class="card-location__line"></div>
+                     <div class="card-location__opening-items">
+                        <div class="card-location__opening-item">
+                           <span class="card-location__days-working">Monday - Friday</span>
+                           <span class="card-location__hours-working">06:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="card-location__opening-item">
+                           <span class="card-location__days-working">Saturday - Sunday</span>
+                           <span class="card-location__hours-working">08:00 AM - 16:00 PM</span>
+                        </div>
+                     </div>
+                     <div class="card-location__line"></div>
+                     <address class="card-location__contacts">
+                        <a href="tel:+61(0)383766284">+61(0) 383 766 284</a>
+                        <a href="mailto:noreply@envato.com">noreply@envato.com</a>
+                     </address>
+                  </div>
+                  <div class="locations__card card-location">
+                     <h3 class="card-location__type">cafe</h3>
+                     <div class="card-location__address">
+                        <span class="card-location__city">New York</span>
+                        <a href="#" class="card-location__postal-address">726 Sterling Pl, Brooklyn, NY&nbsp;11222, USA</a>
+                     </div>
+                     <div class="card-location__line"></div>
+                     <div class="card-location__opening-items">
+                        <div class="card-location__opening-item">
+                           <span class="card-location__days-working">Monday - Friday</span>
+                           <span class="card-location__hours-working">06:00 AM - 10:00 PM</span>
+                        </div>
+                        <div class="card-location__opening-item">
+                           <span class="card-location__days-working">Saturday - Sunday</span>
+                           <span class="card-location__hours-working">08:00 AM - 16:00 PM</span>
+                        </div>
+                     </div>
+                     <div class="card-location__line"></div>
+                     <address class="card-location__contacts">
+                        <a href="tel:+61(0)383766284">+61(0) 383 766 284</a>
+                        <a href="mailto:noreply@envato.com">noreply@envato.com</a>
+                     </address>
+                  </div>
+               </div>
+               <div class="locations__buttons">
+                  <a href="#locations-modal" class="locations__button btn btn--large popup-link" aria-label="The button for opening the modal window 'Our Locations'">
+                     <span>Our&nbsp;Locations</span>
+                     <svg aria-hidden="true" width="12" height="12">
+                        <use xlink:href="./img/icons/sprite.svg#forward-arrow"></use>
+                     </svg>
+                  </a>
+                  <a href="#franchise-modal" class="locations__button btn btn--large btn--transparent popup-link" aria-label="The button for opening the franchise modal">
+                     <span>Franchise</span>
+                     <svg aria-hidden="true" width="12" height="12">
+                        <use xlink:href="./img/icons/sprite.svg#forward-arrow"></use>
+                     </svg>
+                  </a>
+               </div>
+            </div>
+         </section>
+      </main>
+
+      <footer class="footer">
+         <div class="footer__container">
+            <h1 class="footer__title title"><span class="visually-hidden">Ice -</span>homemade ice cream made<span>with passion</span></h1>
+            <div id="contacts" class="footer__contacts">
+               <address class="footer__socials socials">
+                  <a class="socials__icon" href="#">
+                     <svg width="20" height="20">
+                        <use xlink:href="./img/icons/sprite.svg#github"></use>
+                     </svg>
+                  </a>
+                  <a class="socials__icon" href="#">
+                     <svg width="22" height="16">
+                        <use xlink:href="./img/icons/sprite.svg#telegram"></use>
+                     </svg>
+                  </a>
+                  <a class="socials__icon" href="#">
+                     <svg width="11" height="22">
+                        <use xlink:href="./img/icons/sprite.svg#facebook"></use>
+                     </svg>
+                  </a>
+               </address>
+               <address class="footer__phone">
+                  Feel free to contact <a href="tel:+61(0)383766284">+61(0) 383 766 284</a>
+               </address>
+            </div>
+            <div class="footer__copy">
+               <span>© 2022 - IceCream. All&nbsp;Rights&nbsp;Reserved.</span>
+            </div>
+         </div>
+      </footer>
+   </div>
+
+
+   <!-- Buy now modal -->
+   <div id="buy-now" class="popup">
+      <div class="popup__body">
+         <div class="popup__content">
+            <button class="popup__close close-popup">
+               <svg>
+                  <use xlink:href="./img/icons/sprite.svg#close"></use>
+               </svg>
+            </button>
+            <h3 class="popup__heading heading">Buy now</h3>
+            <form id="buy-now-products" class="popup__form form" action="#" method="post" name="buy-now-products">
+               <fieldset class="form__products-box">
+                  <legend class="visually-hidden">Our products</legend>
+                  <label class="form__product">
+                     <div class="img-group img-group--sm">
+                        <picture class="img-group__image">
+                           <source srcset="./img/products/ice-cream-3x.webp" type="image/webp" media="(min-width:767.98px)">
+                           <source srcset="./img/products/ice-cream-3x.jpg" type="image/jpg" media="(min-width:767.98px)">
+                           <source srcset="./img/products/ice-cream-2x.webp" type="image/webp" media="(min-width:575.98px)">
+                           <source srcset="./img/products/ice-cream-2x.jpg" type="image/jpg" media="(min-width:575.98px)">
+                           <source srcset="./img/products/ice-cream-sm.webp" type="image/webp" media="(max-width:575.98px)">
+                           <source srcset="./img/products/ice-cream-sm.jpg" type="image/jpg" media="(max-width:575.98px)">
+                           <img src="./img/products/ice-cream-sm.jpg" loading="lazy" alt="Photo Cones with ice cream balls by <a href='https://unsplash.com/@kelseycurtis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Kelsey Curtis</a> on <a href='https://unsplash.com/@kelseycurtis?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>">
+                        </picture>
+                        <div class="img-group__decor img-group__decor--lightgreen"></div>
+                     </div>
+                     <span>ice&nbsp;cream</span>
+                     <input class="form__checkbox form__checkbox--lightgreen" type="checkbox" name="ice-cream">
+                  </label>
+                  <label class="form__product">
+                     <div class="img-group img-group--sm">
+                        <picture class="img-group__image">
+                           <source srcset="./img/products/ice-coffee-3x.webp" type="image/webp" media="(min-width:767.98px)">
+                           <source srcset="./img/products/ice-coffee-3x.jpg" type="image/jpg" media="(min-width:767.98px)">
+                           <source srcset="./img/products/ice-coffee-2x.webp" type="image/webp" media="(min-width:575.98px)">
+                           <source srcset="./img/products/ice-coffee-2x.jpg" type="image/jpg" media="(min-width:575.98px)">
+                           <source srcset="./img/products/ice-coffee-sm.webp" type="image/webp" media="(max-width:575.98px)">
+                           <source srcset="./img/products/ice-coffee-sm.jpg" type="image/jpg" media="(max-width:575.98px)">
+                           <img src="./img/products/ice-coffee-sm.jpg" loading="lazy" alt="Photo Barista pouring milk into a glass of iced coffee by <a href='https://unsplash.com/@pariwatt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>pariwat pannium</a> on <a href='https://unsplash.com/@pariwatt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>">
+                        </picture>
+                        <div class="img-group__decor img-group__decor--lightyellow"></div>
+                     </div>
+                     <span>ice&nbsp;coffee</span>
+                     <input class="form__checkbox form__checkbox--lightyellow" type="checkbox" name="ice-coffee">
+                  </label>
+                  <label class="form__product">
+                     <div class="img-group img-group--sm">
+                        <picture class="img-group__image">
+                           <source srcset="./img/products/milkshakes-3x.webp" type="image/webp" media="(min-width:767.98px)">
+                           <source srcset="./img/products/milkshakes-3x.jpg" type="image/jpg" media="(min-width:767.98px)">
+                           <source srcset="./img/products/milkshakes-2x.webp" type="image/webp" media="(min-width:575.98px)">
+                           <source srcset="./img/products/milkshakes-2x.jpg" type="image/jpg" media="(min-width:575.98px)">
+                           <source srcset="./img/products/milkshakes-sm.webp" type="image/webp" media="(max-width:575.98px)">
+                           <source srcset="./img/products/milkshakes-sm.jpg" type="image/jpg" media="(max-width:575.98px)">
+                           <img src="./img/products/milkshakes-sm.jpg" loading="lazy" alt="Photo Oreo Frappuccino by <a href='https://unsplash.com/@victorrutka?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Victor Rutka</a> on <a href='https://unsplash.com/@victorrutka?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>">
+                        </picture>
+                        <div class="img-group__decor img-group__decor--lightshocolate"></div>
+                     </div>
+                     <span>milkshake</span>
+                     <input class="form__checkbox form__checkbox--lightshocolate" type="checkbox" name="milkshake">
+                  </label>
+               </fieldset>
+               <input type="text" name="name" placeholder="Name">
+               <input type="tel" name="tel" placeholder="Phone">
+               <textarea name="comment" placeholder="Comment"></textarea>
+               <button type="submit" class="btn close-popup">Submit</button>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <div id="chololate-icecream-ingredients" class="popup">
+      <div class="popup__body">
+         <div class="popup__content">
+            <button class="popup__close close-popup">
+               <svg>
+                  <use xlink:href="./img/icons/sprite.svg#close"></use>
+               </svg>
+            </button>
+            <h3 class="popup__heading heading">Chocolate icecream</h3>
+            <div class="popup__nutritional">
+               <div class="popup__image img-group img-group--sm">
+                  <picture class="img-group__image">
+                     <source srcset="./img/ingredients-modal/shocolate-ice-cream-3x.webp" type="image/webp" media="(min-width:767.98px)">
+                     <source srcset="./img/ingredients-modal/shocolate-ice-cream-3x.jpg" type="image/jpg" media="(min-width:767.98px)">
+                     <source srcset="./img/ingredients-modal/shocolate-ice-cream-2x.webp" type="image/webp" media="(min-width:575.98px)">
+                     <source srcset="./img/ingredients-modal/shocolate-ice-cream-2x.jpg" type="image/jpg" media="(min-width:575.98px)">
+                     <source srcset="./img/ingredients-modal/shocolate-ice-cream-sm.webp" type="image/webp" media="(max-width:575.98px)">
+                     <source srcset="./img/ingredients-modal/shocolate-ice-cream-sm.jpg" type="image/jpg" media="(max-width:575.98px)">
+                     <img src="./img/ingredients-modal/shocolate-ice-cream-sm.jpg" loading="lazy" alt="Photo Chololate icecream by Photo by <a href='https://unsplash.com/@markusspiske?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Markus Spiske</a> on <a href='https://unsplash.com/photos/wxmrTxUAMJE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText'>Unsplash</a>">
+                  </picture>
+                  <div class="img-group__decor img-group__decor--lightgreen"></div>
+               </div>
+               <ul class="popup__nutritional-list nutritional" role="list">
+                  <li class="nutritional__item"><span class="nutritional__value">320</span><span class="nutritional__text">Kcal</span></li>
+                  <li class="nutritional__item"><span class="nutritional__value">4g</span><span class="nutritional__text">Prote<span class="mask">in</span>...</span></li>
+                  <li class="nutritional__item"><span class="nutritional__value">8,2g</span><span class="nutritional__text">Fats</span></li>
+                  <li class="nutritional__item"><span class="nutritional__value">40,4g</span><span class="nutritional__text">Carbs</span></li>
+               </ul>
+            </div>
+            <div class="popup__ingredients-box ingredients">
+               <h4 class="ingredients__title">Ingredients</h4>
+               <ul class="ingredients__items" role="list">
+                  <li class="ingredients__item"><span class="ingredients__product">Milk</span><span class="ingredients__volume">100ml</span></li>
+                  <li class="ingredients__item"><span class="ingredients__product">Belgian chocolate</span><span class="ingredients__volume">20g</span></li>
+                  <li class="ingredients__item"><span class="ingredients__product">Cream</span><span class="ingredients__volume">150 ml</span></li>
+                  <li class="ingredients__item"><span class="ingredients__product">Cocoa powder</span><span class="ingredients__volume">30g</span></li>
+                  <li class="ingredients__item"><span class="ingredients__product">Sugar</span><span class="ingredients__volume">40g</span></li>
+                  <li class="ingredients__item"><span class="ingredients__product">Vanilla sugar</span><span class="ingredients__volume">10g</span></li>
+               </ul>
+            </div>
+            <form id="icecream-ingredients-modal" class="popup__form form" action="#" method="post" name="buy-now-icecream">
+               <input type="text" name="name" placeholder="Name">
+               <input type="tel" name="tel" placeholder="Phone">
+               <textarea name="comment" id="" cols="30" rows="10" placeholder="Comment"></textarea>
+               <button type="submit" class="btn close-popup">Submit</button>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <div id="read-more" class="popup">
+      <div class="popup__body">
+         <div class="popup__content">
+            <button class="popup__close close-popup">
+               <svg>
+                  <use xlink:href="./img/icons/sprite.svg#close"></use>
+               </svg>
+            </button>
+            <h3 class="popup__heading heading">How it’s made?</h3>
+            <div class="popup__video"></div>
+            <div class="popup__description">
+               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div id="locations-modal" class="popup">
+      <div class="popup__body">
+         <div class="popup__content">
+            <button class="popup__close close-popup">
+               <svg>
+                  <use xlink:href="./img/icons/sprite.svg#close"></use>
+               </svg>
+            </button>
+            <h3 class="popup__heading heading">Our Locations</h3>
+            <!-- <div class="popup__map"> -->
+            <picture class="popup__img">
+               <source srcset="./img/location-modal/map-2x.avif" type="image/avif" media="(min-width:767.98px)">
+               <source srcset="./img/location-modal/map-2x.webp" type="image/webp" media="(min-width:767.98px)">
+               <source srcset="./img/location-modal/map-2x.jpg" type="image/jpeg" media="(min-width:767.98px)">
+               <source srcset="./img/location-modal/map-sm.avif, ./img/location-modal/map-2x.avif 2x" type="image/avif">
+               <source srcset="./img/location-modal/map-sm.webp, ./img/location-modal/map-2x.webp 2x" type="image/webp">
+               <img src="./img/location-modal/map-sm.jpg" srcset="./img/location-modal/map-2x.jpg 2x" alt="A map Poltava">
+            </picture>
+            <!-- </div> -->
+            <a href="#" class="about__button btn popup-link" aria-label="The button for opening the modal window 'map-modal'">
+               <span>Open map</span>
+            </a>
+         </div>
+      </div>
+   </div>
+
+   <div id="franchise-modal" class="popup">
+      <div class="popup__body">
+         <div class="popup__content">
+            <button class="popup__close close-popup">
+               <svg>
+                  <use xlink:href="./img/icons/sprite.svg#close"></use>
+               </svg>
+            </button>
+            <h3 class="popup__heading heading">Thank you for your interest in owning an Ice Cream shop</h3>
+            <div class="popup__description">
+               <p>Due to the overwhelming volume of franchise requests we are not accepting new franchisee applications at this time. Once the application process resumes, we will contact you for further information. Please fill out the contact information below and we will reach out for additional information. We appreciate your patience.</p>
+            </div>
+            <form id="franchise-form" class="popup__form form" action="#" method="post" name="franchise-form">
+               <input type="text" name="name" placeholder="Name">
+               <input type="tel" name="tel" placeholder="Phone">
+               <input type="email" name="email" placeholder="Email">
+               <textarea name="comment" placeholder="Comment"></textarea>
+               <button type="submit" class="btn close-popup">Submit</button>
+            </form>
+         </div>
+      </div>
+   </div>
+
+   <script src="./js/slider-overlay.js"></script>
+   <script src="./js/main.js"></script>
+</body>
+
+
+
+</html>
